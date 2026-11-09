@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK & Dubai Salary & Currency Calculator 2026</title>
+<style>
+body{font-family:Arial;background:#eef2ff;margin:0;padding:15px;text-align:center}
+h1{color:#4f46e5}.box{background:#fff;max-width:460px;margin:15px auto;padding:22px;border-radius:18px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+input,select{width:92%;padding:12px;margin:8px;border:2px solid #c7d2fe;border-radius:10px;font-size:17px;text-align:center}
+button{background:#4f46e5;color:#fff;border:none;padding:13px 25px;border-radius:10px;font-size:17px;cursor:pointer;width:96%}
+.res{margin-top:12px;font-weight:bold;color:#15803d;background:#f0fdf4;padding:13px;border-radius:10px;font-size:18px}
+small{color:#666}
+</style></head>
+<body>
+<h1>UK & Dubai Calculator</h1><p>Best Tools for UK & UAE Jobs, Salary & Money</p>
+
+<div class="box"><h2>Currency Converter - GBP / AED to PKR</h2>
+<input type="number" id="amt" placeholder="Amount - Example 1000">
+<select id="cur"><option value="380">GBP (£) to PKR - 1 £ = 380 Rs</option><option value="76">AED (Dirham) to PKR - 1 AED = 76 Rs</option><option value="280">USD ($) to PKR - 1 $ = 280 Rs</option></select>
+<button onclick="curr()">Convert Now</button><div class="res" id="currRes">Result will show here</div></div>
+
+<div class="box"><h2>UK Take Home Salary Calculator</h2>
+<input type="number" id="uksal" placeholder="Yearly Salary in £ - Example 30000">
+<button onclick="uk()">Calculate Take Home</button><div class="res" id="ukRes">Result will show here</div></div>
+
+<div class="box"><h2>Dubai Salary Calculator</h2>
+<input type="number" id="duba" placeholder="Monthly Salary in AED - Example 8000">
+<button onclick="dubai()">Calculate in PKR</button><div class="res" id="dubRes">Result will show here</div></div>
+
+<div class="box"><h2>UK / Dubai Visa Cost Checker</h2>
+<select id="visa"><option value="80000">UK Visit Visa - Approx Rs 80,000</option><option value="150000">UK Work Visa - Approx Rs 150,000</option><option value="25000">Dubai Visit Visa - Approx Rs 25,000</option><option value="60000">Dubai Work Visa - Approx Rs 60,000</option></select>
+<button onclick="visa()">Check Cost</button><div class="res" id="visaRes">Result will show here</div></div>
+
+<script>
+function curr(){let a=document.getElementById('amt').value;let c=document.getElementById('cur').value;document.getElementById('currRes').innerText="In PKR: Rs "+(a*c).toLocaleString();}
+function uk(){let s=document.getElementById('uksal').value;let monthly=(s*0.75/12).toFixed(0);document.getElementById('ukRes').innerText="Your Monthly Take Home: £ "+monthly+" | In PKR: Rs "+(monthly*380).toLocaleString();}
+function dubai(){let d=document.getElementById('duba').value;document.getElementById('dubRes').innerText="Monthly in PKR: Rs "+(d*76).toLocaleString()+" | Yearly: Rs "+(d*76*12).toLocaleString();}
+function visa(){let v=document.getElementById('visa').value;document.getElementById('visaRes').innerText="Estimated Cost: Rs "+Number(v).toLocaleString();}
+</script>
+</body></html>
